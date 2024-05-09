@@ -10,7 +10,7 @@ export default async function InvoicesTable({
 }: {
   query: string;
   currentPage: number;
-}) {
+}): Promise<JSX.Element> {
   const invoices = await fetchFilteredInvoices(query, currentPage);
 
   return (

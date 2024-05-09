@@ -6,7 +6,12 @@
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
     "start": "next start",
-    "seed": "node -r dotenv/config ./scripts/seed.js"
+    "seed": "node -r dotenv/config ./scripts/seed.js",
+    "lint": "next lint",
+    "preinstall": "npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "@types/react": "^17.0.38"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
@@ -17,6 +22,7 @@
     "bcrypt": "^5.1.1",
     "clsx": "^2.0.0",
     "next": "^14.0.2",
+    "npm-force-resolutions": "^0.0.10",
     "postcss": "8.4.31",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -27,8 +33,8 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.0.2",
     "@types/bcrypt": "^5.0.1",
-    "@types/react": "18.2.21",
-    "@types/react-dom": "18.2.14",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@vercel/style-guide": "^5.0.1",
     "add": "^2.0.6",
